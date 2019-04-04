@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/binfo"
         android:layout_width="301dp"
         android:layout_height="101dp"
         android:layout_marginStart="48dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/bsearch"
         android:layout_width="301dp"
         android:layout_height="101dp"
         android:layout_marginStart="52dp"
@@ -27,10 +27,10 @@
         android:background="@color/green2"
         android:text="의약품 검색"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/binfo" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/bcategory"
         android:layout_width="301dp"
         android:layout_height="100dp"
         android:layout_marginStart="52dp"
@@ -38,5 +38,6 @@
         android:background="@color/green3"
         android:text="의약품 카테고리"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/bsearch" />
+
 </android.support.constraint.ConstraintLayout>
