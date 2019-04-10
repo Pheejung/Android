@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity {
     TextView textview1;
+    TextView textview2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,5 +14,6 @@ public class InfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info);
 
         textview1 = (TextView)findViewById(R.id.textView1);
+        textview2 = (TextView)findViewById(R.id.textView2);
     }
 }
