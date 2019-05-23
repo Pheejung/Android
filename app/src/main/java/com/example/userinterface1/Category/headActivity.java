@@ -1,9 +1,11 @@
-package com.example.userinterface1;
+package com.example.userinterface1.Category;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.userinterface1.R;
 
 public class headActivity extends AppCompatActivity {
 

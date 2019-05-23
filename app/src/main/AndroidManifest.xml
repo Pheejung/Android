@@ -11,8 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".neckActivity"></activity>
-        <activity android:name=".headActivity" />
+        <activity android:name=".Category.muscleActivity"></activity>
+        <activity android:name=".Category.jointActivity" />
+        <activity android:name=".Category.stomachActivity" />
+        <activity android:name=".Category.eyeActivity" />
+        <activity android:name=".Category.neckActivity" />
+        <activity android:name=".Category.headActivity" />
         <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
