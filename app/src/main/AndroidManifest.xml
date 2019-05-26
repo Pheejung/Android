@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Category.muscleActivity"></activity>
+        <activity android:name=".Fragment"></activity>
+        <activity android:name=".Category.FragActivity" />
+        <activity android:name=".Category.muscleActivity" />
         <activity android:name=".Category.jointActivity" />
         <activity android:name=".Category.stomachActivity" />
         <activity android:name=".Category.eyeActivity" />

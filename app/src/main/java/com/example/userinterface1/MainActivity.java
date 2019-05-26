@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         binfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, InfoActivity.class);
+                Intent i = new Intent(context, Fragment.class);
                 startActivity(i);
             }
         });
