@@ -8,10 +8,11 @@
 
     <EditText
         android:id="@+id/search"
-        android:layout_width="264dp"
+        android:layout_width="279dp"
         android:layout_height="60dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="의약품을 검색하세요."
         android:inputType="textPersonName"
@@ -23,51 +24,27 @@
         android:id="@+id/button"
         android:layout_width="87dp"
         android:layout_height="51dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/button2"
         android:text="검색"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/search"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="395dp"
-        android:layout_height="0dp"
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="399dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/search">
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/searchtext"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/scrollView" />
-        </LinearLayout>
-    </ScrollView>
-
-
+    </ListView>
 </android.support.constraint.ConstraintLayout>

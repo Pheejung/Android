@@ -1,4 +1,4 @@
-package com.example.userinterface1;
+package com.example.userinterface1.Blank;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,9 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.userinterface1.R;
 
-public class Blank3 extends Fragment {
-    public Blank3() {
+public class Blank2 extends Fragment {
+    public Blank2() {
         // Required empty public constructor
     }
 
@@ -18,6 +19,6 @@ public class Blank3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank3, container, false);
+        return inflater.inflate(R.layout.fragment_blank2, container, false);
     }
 }

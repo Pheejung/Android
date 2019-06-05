@@ -3,13 +3,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".Blank1">
+    tools:context=".Blank.Blank1">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="성분정보"
+                android:textColor="@color/colorAccent"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/textinfo"
+                android:layout_width="match_parent"
+                android:layout_height="133dp"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="분류번호"
+                android:textColor="@color/colorAccent"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/textnum"
+                android:layout_width="match_parent"
+                android:layout_height="133dp"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="구분"
+                android:textColor="@color/colorAccent"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/textdiv"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="투여경로"
+                android:textColor="@color/colorAccent"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/textroute"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
 </FrameLayout>

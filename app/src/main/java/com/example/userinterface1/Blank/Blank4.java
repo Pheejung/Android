@@ -1,17 +1,18 @@
-package com.example.userinterface1;
+package com.example.userinterface1.Blank;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Blank1 extends Fragment {
-    public Blank1() {
+import com.example.userinterface1.R;
+
+
+public class Blank4 extends Fragment {
+    public Blank4() {
         // Required empty public constructor
     }
 
@@ -19,7 +20,6 @@ public class Blank1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank1, container, false);
+        return inflater.inflate(R.layout.fragment_blank4, container, false);
     }
 }
-
