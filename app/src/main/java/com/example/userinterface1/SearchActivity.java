@@ -3,8 +3,6 @@ package com.example.userinterface1;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.os.StrictMode;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,17 +12,14 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import com.example.userinterface1.Blank.Blank1;
-
-import org.w3c.dom.Text;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Vector;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -34,6 +29,7 @@ public class SearchActivity extends AppCompatActivity {
     Button button;
     Item medicial;
     Context context;
+    ArrayList list_item = new ArrayList<Item>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +50,23 @@ public class SearchActivity extends AppCompatActivity {
 
         @Override
         protected ArrayList<Item> doInBackground(Void... voids) {
-            ArrayList list_item = new ArrayList<Item>();
+
+            listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent i = new Intent(context, Fragment.class);
+                    i.putExtra("MATERIAL_NAME", medicial.getMATERIAL_NAME());
+                    i.putExtra("STORAGE_METHOD", medicial.getSTORAGE_METHOD());
+                    i.putExtra("CHART", medicial.getCHART());
+                    i.putExtra("ITEM_SEQ", medicial.getITEN_SEQ());
+                    startActivity(i);
+
+
+
+                }
+            });
+
+
             try {
                 URL url = new URL("http://apis.data.go.kr/1471057/MdcinPrductPrmisnInfoService/getMdcinPrductItem?" +
                         "ServiceKey=zKEYnBXq1W2zs1lhfybiaweGiVMgLlXm2GxzxrPj9lozlqgIV9965cXb%2FQ%2B6DdHnOb3vrMC9GJ9aX%2FZ6IcYVGw%3D%3D&" +
@@ -64,7 +76,7 @@ public class SearchActivity extends AppCompatActivity {
 
                 parser.setInput(url.openStream(), null);
 
-                boolean inITEM_NAME = false;
+                boolean inITEM_NAME = false, inMATERIAL_NAME = false, inSTORAGE_METHOD = false, inCHART = false, inITEM_SEQ = false, inDOC = false;
 
                 int eventType = parser.getEventType();
 
@@ -85,11 +97,32 @@ public class SearchActivity extends AppCompatActivity {
                                 medicial = new Item();
                             }
                             if (parser.getName().equals("ITEM_NAME")) inITEM_NAME = true;
+                            if (parser.getName().equals("MATERIAL_NAME")) inMATERIAL_NAME = true;
+                            if (parser.getName().equals("STORAGE_METHOD")) inSTORAGE_METHOD = true;
+                            if (parser.getName().equals("CHART")) inCHART = true;
+                            if (parser.getName().equals("ITEM_SEQ")) inITEM_SEQ = true;
                             break;
+
                         case XmlPullParser.TEXT:
                             if (inITEM_NAME) {
                                 medicial.setITEM_NAME(parser.getText());
                                 inITEM_NAME = false;
+                            }
+                            if (inMATERIAL_NAME) {
+                                medicial.setMATERIAL_NAME(parser.getText());
+                                inMATERIAL_NAME = false;
+                            }
+                            if (inSTORAGE_METHOD) {
+                                medicial.setSTORAGE_METHOD(parser.getText());
+                                inSTORAGE_METHOD = false;
+                            }
+                            if (inCHART) {
+                                medicial.setCHART(parser.getText());
+                                inCHART = false;
+                            }
+                            if(inITEM_SEQ) {
+                                medicial.setITEN_SEQ(parser.getText());
+                                inITEM_SEQ = false;
                             }
                             break;
                     }
@@ -110,6 +143,7 @@ public class SearchActivity extends AppCompatActivity {
 
             mMyAdapter = new MyAdapter(SearchActivity.this, items);
             listview.setAdapter(mMyAdapter);
+
 
             search.addTextChangedListener(new TextWatcher() {
                 @Override

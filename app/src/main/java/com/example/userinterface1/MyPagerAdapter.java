@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.example.userinterface1.Blank.Blank1;
 import com.example.userinterface1.Blank.Blank2;
 import com.example.userinterface1.Blank.Blank3;
-import com.example.userinterface1.Blank.Blank4;
 
 public class MyPagerAdapter extends FragmentPagerAdapter {
         int mNumOfTabs; //tab의 갯수
@@ -30,9 +29,6 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
                 case 2:
                     Blank3 tab3 = new Blank3();
                     return tab3;
-                case 3:
-                    Blank4 tab4 = new Blank4();
-                    return tab4;
                 default:
                     return null;
             }

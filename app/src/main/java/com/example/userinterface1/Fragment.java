@@ -16,13 +16,12 @@ public class Fragment extends AppCompatActivity {
         tabs.addTab(tabs.newTab().setText("기본"));
         tabs.addTab(tabs.newTab().setText("효능"));
         tabs.addTab(tabs.newTab().setText("주의"));
-        tabs.addTab(tabs.newTab().setText("DUR"));
 
         tabs.setTabGravity(tabs.GRAVITY_FILL);
 
         //어답터설정
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-        final MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), 4);
+        final MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), 3);
         viewPager.setAdapter(myPagerAdapter);
 
         //탭메뉴를 클릭하면 해당 프래그먼트로 변경-싱크화
