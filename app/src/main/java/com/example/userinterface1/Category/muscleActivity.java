@@ -8,8 +8,9 @@ import android.widget.ListView;
 import com.example.userinterface1.R;
 
 public class muscleActivity extends AppCompatActivity {
-
-    static final String[] List_MENU = {};
+    //무좀, 피부질환, 두드러기, 가려움증
+    static final String[] List_MENU = {"피엠정액","페니라민주사(클로르페니라민말레산염)","페니라민정(클로르페니라민말레산염)",
+            "푸라콩주(피프린히드리네이트)","덱사소론정0.75밀리그람(덱사메타손)","덱사코티실정(덱사메타손)","부광덱사메타손정"};
 
 
     @Override

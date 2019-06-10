@@ -8,8 +8,9 @@ import android.widget.ListView;
 import com.example.userinterface1.R;
 
 public class jointActivity extends AppCompatActivity {
-
-    static final String[] List_MENU = {};
+    //고칼륨혈증, 심진환, 저혈당, 고혈압, 심질환
+    static final String[] List_MENU = {"디크로다이드정(히드로클로로티아지드)","디고신정(디곡신)","아주디곡신주사액",
+            "라식스주사(푸로세미드)","중외10%포도당주사액"};
 
 
     @Override

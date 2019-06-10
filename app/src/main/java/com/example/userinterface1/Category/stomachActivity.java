@@ -8,7 +8,7 @@ import android.widget.ListView;
 import com.example.userinterface1.R;
 
 public class stomachActivity extends AppCompatActivity {
-
+    //위산과다, 속쓰림, 구토, 식욕감퇴, 소화불량, 변비(위장)
     static final String[] List_MENU = {"핫도리과립", "통쾌한", "베스타제당의정", "베스타제정", "씨제이후라시닐정", "보화소합원", "대원황산아트로핀주사액",
             "게루삼정", "삼영단환", "온보왕", "스므스삼중정", "옥시톤주사액5(아이유)옥시토신", "신풍아스피린정", "아네모정", ""};
 
