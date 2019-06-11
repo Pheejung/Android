@@ -29,7 +29,7 @@ public class SearchActivity extends AppCompatActivity {
     Button button;
     Item medicial;
     Context context;
-    ArrayList list_item = new ArrayList<Item>();
+    ArrayList<Item> list_item = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,10 +55,10 @@ public class SearchActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent i = new Intent(context, Fragment.class);
-                    i.putExtra("MATERIAL_NAME", medicial.getMATERIAL_NAME());
-                    i.putExtra("STORAGE_METHOD", medicial.getSTORAGE_METHOD());
-                    i.putExtra("CHART", medicial.getCHART());
-                    i.putExtra("ITEM_SEQ", medicial.getITEN_SEQ());
+                    i.putExtra("MATERIAL_NAME",list_item.get(position).getMATERIAL_NAME());
+                    i.putExtra("STORAGE_METHOD", list_item.get(position).getSTORAGE_METHOD());
+                    i.putExtra("CHART",list_item.get(position).getCHART());
+                    i.putExtra("ITEM_SEQ", list_item.get(position).getITEN_SEQ());
                     startActivity(i);
 
 

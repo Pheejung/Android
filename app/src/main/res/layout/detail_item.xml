@@ -48,7 +48,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="114dp"
+            android:layout_height="192dp"
             android:orientation="vertical">
 
             <TextView
@@ -61,13 +61,13 @@
             <TextView
                 android:id="@+id/tv_color"
                 android:layout_width="match_parent"
-                android:layout_height="54dp"
+                android:layout_height="99dp"
                 android:textSize="20dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="175dp"
             android:orientation="vertical">
 
             <TextView
@@ -80,7 +80,7 @@
             <TextView
                 android:id="@+id/tv_barcode"
                 android:layout_width="match_parent"
-                android:layout_height="54dp"
+                android:layout_height="127dp"
                 android:textSize="20dp" />
         </LinearLayout>
 
