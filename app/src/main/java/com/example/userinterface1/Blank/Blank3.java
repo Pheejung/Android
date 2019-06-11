@@ -2,6 +2,7 @@ package com.example.userinterface1.Blank;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -25,8 +26,13 @@ public class Blank3 extends Fragment {
         View view = inflater.inflate(R.layout.detail_item3, container, false);
 
         Intent i = getActivity().getIntent();
-        TextView tv_ju = (TextView) view.findViewById(R.id.tv_ju);
-        tv_ju.setText(i.getStringExtra("MATERIAL_NAME"));
+
+        TextView tv_name = (TextView) view.findViewById(R.id.tv_name);
+        tv_name.setText(i.getStringExtra("ITEM_NAME"));
+
+        TextView tv_hyo = (TextView) view.findViewById(R.id.tv_hyo);
+        tv_hyo.setText(i.getStringExtra("STORAGE_METHOD"));
+        tv_hyo.setTextColor(Color.BLACK);
 
         return view;
     }

@@ -19,7 +19,6 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Locale;
-import java.util.Vector;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -55,14 +54,14 @@ public class SearchActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent i = new Intent(context, Fragment.class);
-                    i.putExtra("MATERIAL_NAME",list_item.get(position).getMATERIAL_NAME());
+
+                    i.putExtra("ITEM_NAME", list_item.get(position).getITEM_NAME());
+                    i.putExtra("VALID_TERM", list_item.get(position).getVALID_TERM());
+                    i.putExtra("MATERIAL_NAME", list_item.get(position).getMATERIAL_NAME());
                     i.putExtra("STORAGE_METHOD", list_item.get(position).getSTORAGE_METHOD());
-                    i.putExtra("CHART",list_item.get(position).getCHART());
+                    i.putExtra("CHART", list_item.get(position).getCHART());
                     i.putExtra("ITEM_SEQ", list_item.get(position).getITEN_SEQ());
                     startActivity(i);
-
-
-
                 }
             });
 
@@ -76,7 +75,7 @@ public class SearchActivity extends AppCompatActivity {
 
                 parser.setInput(url.openStream(), null);
 
-                boolean inITEM_NAME = false, inMATERIAL_NAME = false, inSTORAGE_METHOD = false, inCHART = false, inITEM_SEQ = false, inDOC = false;
+                boolean inITEM_NAME = false, inVALD_TERM = false, inMATERIAL_NAME = false, inSTORAGE_METHOD = false, inCHART = false, inITEM_SEQ = false, inDOC = false;
 
                 int eventType = parser.getEventType();
 
@@ -97,6 +96,7 @@ public class SearchActivity extends AppCompatActivity {
                                 medicial = new Item();
                             }
                             if (parser.getName().equals("ITEM_NAME")) inITEM_NAME = true;
+                            if (parser.getName().equals("VALID_TERM")) inVALD_TERM = true;
                             if (parser.getName().equals("MATERIAL_NAME")) inMATERIAL_NAME = true;
                             if (parser.getName().equals("STORAGE_METHOD")) inSTORAGE_METHOD = true;
                             if (parser.getName().equals("CHART")) inCHART = true;
@@ -107,6 +107,10 @@ public class SearchActivity extends AppCompatActivity {
                             if (inITEM_NAME) {
                                 medicial.setITEM_NAME(parser.getText());
                                 inITEM_NAME = false;
+                            }
+                            if (inVALD_TERM) {
+                                medicial.setVALID_TERM(parser.getText());
+                                inVALD_TERM = false;
                             }
                             if (inMATERIAL_NAME) {
                                 medicial.setMATERIAL_NAME(parser.getText());

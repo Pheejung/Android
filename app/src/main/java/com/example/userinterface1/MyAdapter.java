@@ -1,6 +1,7 @@
 package com.example.userinterface1;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -53,6 +54,7 @@ public class MyAdapter extends BaseAdapter {
 //        }
 
         ITEM_NAME.setText(list_item.get(position).getITEM_NAME());
+        ITEM_NAME.setTextColor(Color.BLACK);
 
         return convertView;
     }

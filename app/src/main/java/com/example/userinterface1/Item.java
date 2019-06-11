@@ -3,6 +3,7 @@ package com.example.userinterface1;
 public class Item {
 
     String ITEM_NAME;
+    String VALID_TERM;
     String MATERIAL_NAME;
     String STORAGE_METHOD;
     String CHART;
@@ -14,6 +15,14 @@ public class Item {
 
     public void setITEM_NAME(String ITEM_NAME) {
         this.ITEM_NAME = ITEM_NAME;
+    }
+
+    public String getVALID_TERM() {
+        return VALID_TERM;
+    }
+
+    public void setVALID_TERM(String VALID_TERM) {
+        this.VALID_TERM = VALID_TERM;
     }
 
     public String getMATERIAL_NAME() {
