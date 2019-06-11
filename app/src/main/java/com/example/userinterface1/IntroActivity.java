@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
 
 public class IntroActivity extends AppCompatActivity {
     private Handler handler;
@@ -24,8 +25,6 @@ public class IntroActivity extends AppCompatActivity {
         init();
 
         handler.postDelayed(runnable, 3000);
-
-
     }
 
     public void init() {
