@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -8,80 +9,92 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="167dp"
+            android:layout_height="178dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="성분정보"
-                android:textColor="@color/colorAccent"
+                android:textColor="#ffffff"
+                android:background="#09458C"
                 android:textSize="24dp" />
 
             <TextView
                 android:id="@+id/tv_info"
                 android:layout_width="match_parent"
-                android:layout_height="133dp"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="167dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="저장방법"
-                android:textColor="@color/colorAccent"
-                android:textSize="24dp" />
-
-            <TextView
-                android:id="@+id/tv_storage"
-                android:layout_width="match_parent"
-                android:layout_height="133dp"
-                android:textSize="20dp" />
+                android:textSize="18dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="192dp"
+            android:layout_height="132dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="색"
-                android:textColor="@color/colorAccent"
+                android:textColor="#ffffff"
+                android:background="#09458C"
                 android:textSize="24dp" />
 
             <TextView
                 android:id="@+id/tv_color"
                 android:layout_width="match_parent"
-                android:layout_height="99dp"
-                android:textSize="20dp" />
+                android:layout_height="wrap_content"
+                android:textSize="18dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="175dp"
+            android:layout_height="102dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="유효기간"
+                android:textColor="#ffffff"
+                android:background="#09458C"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/tv_valid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="표준코드"
-                android:textColor="@color/colorAccent"
+                android:textColor="#ffffff"
+                android:background="#09458C"
                 android:textSize="24dp" />
-
             <TextView
                 android:id="@+id/tv_barcode"
                 android:layout_width="match_parent"
                 android:layout_height="127dp"
-                android:textSize="20dp" />
+                android:textSize="18dp" />
+
         </LinearLayout>
 
     </LinearLayout>
