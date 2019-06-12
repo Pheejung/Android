@@ -6,12 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button binfo;
-    private Button bsearch;
-    private Button bcategory;
+   ViewFlipper vflip;
+   Button bsearch, bcategory;
     Context context;
 
     @Override
@@ -19,18 +20,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        binfo = (Button) findViewById(R.id.binfo);
-        bsearch = (Button) findViewById(R.id.bsearch);
-        bcategory = (Button) findViewById(R.id.bcategory);
+        bsearch = findViewById(R.id.bsearch);
+        bcategory = findViewById(R.id.bcategory);
         context = this;
-
-        binfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(context, Fragment.class);
-                startActivity(i);
-            }
-        });
 
         bsearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,5 +40,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        int images[] = {
+            R.drawable.main1,
+            R.drawable.main2,
+            R.drawable.main3
+        };
+
+        vflip = findViewById(R.id.imgslide);
+        for(int image : images) {
+            flipimages(image);
+        }
+
+    }
+
+    public void flipimages(int image) {
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+
+        vflip.addView(imageView);
+        vflip.setFlipInterval(4000);
+        vflip.setAutoStart(true);
+
+        vflip.setInAnimation(this, android.R.anim.slide_in_left);
+        vflip.setOutAnimation(this,android.R.anim.slide_out_right);
     }
 }
