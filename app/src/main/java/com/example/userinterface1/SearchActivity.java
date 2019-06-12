@@ -1,5 +1,6 @@
 package com.example.userinterface1;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -12,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -28,6 +30,7 @@ public class SearchActivity extends AppCompatActivity {
     Button button;
     Item medicial;
     Context context;
+    ProgressBar progressBar;
     ArrayList<Item> list_item = new ArrayList<>();
 
     @Override
@@ -37,9 +40,26 @@ public class SearchActivity extends AppCompatActivity {
 
         search = (EditText) findViewById(R.id.search);
         button = (Button) findViewById(R.id.search_button);
+        progressBar = (ProgressBar) findViewById(R.id.progressbar);
         context = this;
 
         listview = (ListView) findViewById(R.id.listview);
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(context, Fragment.class);
+
+                i.putExtra("ITEM_NAME", list_item.get(position).getITEM_NAME());
+                i.putExtra("VALID_TERM", list_item.get(position).getVALID_TERM());
+                i.putExtra("MATERIAL_NAME", list_item.get(position).getMATERIAL_NAME());
+                i.putExtra("STORAGE_METHOD", list_item.get(position).getSTORAGE_METHOD());
+                i.putExtra("CHART", list_item.get(position).getCHART());
+                i.putExtra("ITEM_SEQ", list_item.get(position).getITEN_SEQ());
+                startActivity(i);
+            }
+        });
+
 
 
         new DataLoadTask().execute();
@@ -50,20 +70,8 @@ public class SearchActivity extends AppCompatActivity {
         @Override
         protected ArrayList<Item> doInBackground(Void... voids) {
 
-            listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent i = new Intent(context, Fragment.class);
+            progressBar.setVisibility(View.VISIBLE);
 
-                    i.putExtra("ITEM_NAME", list_item.get(position).getITEM_NAME());
-                    i.putExtra("VALID_TERM", list_item.get(position).getVALID_TERM());
-                    i.putExtra("MATERIAL_NAME", list_item.get(position).getMATERIAL_NAME());
-                    i.putExtra("STORAGE_METHOD", list_item.get(position).getSTORAGE_METHOD());
-                    i.putExtra("CHART", list_item.get(position).getCHART());
-                    i.putExtra("ITEM_SEQ", list_item.get(position).getITEN_SEQ());
-                    startActivity(i);
-                }
-            });
 
 
             try {
@@ -143,6 +151,7 @@ public class SearchActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(ArrayList<Item> items) {
+
             super.onPostExecute(items);
 
             mMyAdapter = new MyAdapter(SearchActivity.this, items);
@@ -164,6 +173,7 @@ public class SearchActivity extends AppCompatActivity {
                 public void afterTextChanged(Editable s) {
                     String text = search.getText().toString().toLowerCase(Locale.getDefault());
                     mMyAdapter.filter(text);
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
             });
         }

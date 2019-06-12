@@ -12,22 +12,30 @@
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="효능"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
             android:textColor="#ffffff"
             android:background="#09458C"
-            android:textSize="24dp" />
+            android:textSize="22dp" />
 
         <TextView
             android:id="@+id/tv_hyo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
             android:textSize="18dp" />
 
 
