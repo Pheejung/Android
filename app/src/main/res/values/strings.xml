@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">의약품 정보</string>
+    <string name="app_category">의약품 카테고리</string>
+    <string name="app_search">의약품 검색</string>
+    <string name="app_head">의약품 카테고리 - 두통/빈혈</string>
+    <string name="app_throat">의약품 카테고리 - 목감기</string>
+    <string name="app_stomach">의약품 카테고리 - 소화불량</string>
+    <string name="app_heart">의약품 카테고리 - 심장/피부질환</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
