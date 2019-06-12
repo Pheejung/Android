@@ -6,15 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.userinterface1.Category.headActivity;
-import com.example.userinterface1.Category.jointActivity;
 import com.example.userinterface1.Category.muscleActivity;
 import com.example.userinterface1.Category.neckActivity;
+import com.example.userinterface1.Category.stomachActivity;
 
 public class CategoryActivity extends AppCompatActivity {
 
-    private Button head, neck, joint, muscle;
+    private Button imghead, imgthroat, imgstomach, imgheart;
     private Context context;
 
     @Override
@@ -24,12 +25,12 @@ public class CategoryActivity extends AppCompatActivity {
 
         context = this;
 
-        /*head = (Button) findViewById(R.id.head);
-        neck = (Button) findViewById(R.id.neck);
-        joint = (Button) findViewById(R.id.joint);
-        muscle = (Button) findViewById(R.id.muscle);*/
+        imghead = (Button) findViewById(R.id.imghead);
+        imgthroat = (Button) findViewById(R.id.imgthroat);
+        imgstomach = (Button) findViewById(R.id.imgstomach);
+        imgheart = (Button) findViewById(R.id.imgheart);
 
-        head.setOnClickListener(new View.OnClickListener() {
+        imghead.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent headi = new Intent(context, headActivity.class);
@@ -38,7 +39,7 @@ public class CategoryActivity extends AppCompatActivity {
         });
 
 
-        neck.setOnClickListener(new View.OnClickListener() {
+        imgthroat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent necki = new Intent(context, neckActivity.class);
@@ -47,15 +48,15 @@ public class CategoryActivity extends AppCompatActivity {
         });
 
 
-        joint.setOnClickListener(new View.OnClickListener() {
+        imgstomach.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent jointi = new Intent(context, jointActivity.class);
+                Intent jointi = new Intent(context, stomachActivity.class);
                 startActivity(jointi);
             }
         });
 
-        muscle.setOnClickListener(new View.OnClickListener() {
+        imgheart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent musclei = new Intent(context, muscleActivity.class);
