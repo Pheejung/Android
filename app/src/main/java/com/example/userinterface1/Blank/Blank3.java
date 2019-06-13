@@ -31,7 +31,7 @@ public class Blank3 extends Fragment {
         tv_name.setText(i.getStringExtra("ITEM_NAME"));
 
         TextView tv_hyo = (TextView) view.findViewById(R.id.tv_hyo);
-        tv_hyo.setText(i.getStringExtra("STORAGE_METHOD"));
+        tv_hyo.setText(i.getStringExtra("DOC_NB"));
         tv_hyo.setTextColor(Color.BLACK);
 
         return view;

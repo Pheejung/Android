@@ -44,6 +44,19 @@ public class neckActivity extends AppCompatActivity {
 
     String[] List_item = new String[] {"1956000001", "195700028", "195500002", "195900045", "196000001", "196600062", "196200043", "196300044", "195800019", "195800018", "196000010", "196400056", "195700013"};
 
+    String List_doc_data = new String ("1. 다음 질환에서의 기침 : 기관지천식, 감기, 급•만성기관지염, 상기도염\n" + "2. 비점막의 충혈·종창");
+
+    String List_doc_nb = new String ("(1) 경고 \n" +
+            "매일 세잔 이상 정기적으로 술을 마시는 사람이 이 약이나 다른 해열진통제를 복용해야 할 경우 반드시 의사 또는 약사와 상의해야한다. 이러한 사람이 이 약을 복용하면 간 손상이 유발될 수 있다.\n" +
+            "(2) 다음 환자에는 신중히 투여할 것\n" +
+            "이 약은 황색 4호(타르트라진)를 함유하고 있으므로 이 성분에 과민하거나 알레르기 병력이 있는 환자에는 신중히 투여한다\n" +
+            "(3) 이 약을 복용하는 동안 다음의 약을 복용하지 말 것\n" +
+            "진해거담제, 다른 감기약, 해열진통제, 진정제, 항히스타민제를 함유하는 내복약(비염용 경구제, 멀미약, 알레르기용약)\n" +
+            "(4) 저장상의 주의사항\n" +
+            "1) 어린이의 손에 닿지 않는 장소에 보관할 것\n" +
+            "2) 직사광선을 피하고 될 수 있는 한 습기가 적은 서늘한 곳에 보관할 것\n" +
+            "3) 오용을 막고 품질의 보존을 위하여 다른 용기에 바꾸어 넣지 말 것\n" );
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +77,8 @@ public class neckActivity extends AppCompatActivity {
                 i.putExtra("MATERIAL_NAME", List_material[position]);
                 i.putExtra("CHART", List_chart[position]);
                 i.putExtra("ITEM_SEQ", List_item[position]);
+                i.putExtra("DOC_DATA",List_doc_data);
+                i.putExtra("DOC_NB",List_doc_nb);
 
                 startActivity(i);
             }
