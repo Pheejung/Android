@@ -25,7 +25,7 @@
             android:layout_height="60dp"
             android:background="@drawable/main_item_button"
             android:backgroundTint="@color/background"
-            android:text="아이템 검색"
+            android:text="의약품 검색"
             android:textColor="@android:color/white"
             android:layout_marginBottom="70dp"
             android:layout_marginTop="70dp"
@@ -38,7 +38,7 @@
             android:layout_height="60dp"
             android:background="@drawable/main_item_button"
             android:backgroundTint="@color/background"
-            android:text="아이템 카테고리"
+            android:text="의약품 카테고리"
             android:textSize="16dp"
             android:textColor="@android:color/white"
             android:layout_marginLeft="110dp"/>
