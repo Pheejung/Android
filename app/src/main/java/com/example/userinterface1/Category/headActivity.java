@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.example.userinterface1.Fragment;
 import com.example.userinterface1.R;
+import com.example.userinterface1.SearchActivity;
 
 import java.util.ArrayList;
 
@@ -83,8 +84,6 @@ public class headActivity extends AppCompatActivity {
                 i.putExtra("DOC_NB",List_doc_nb);
                 i.putExtra("DOC_DATA",List_doc_data);
                 i.putExtra("DOC_NB",List_doc_nb);
-
-
                 startActivity(i);
             }
         });

@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void flipimages(int image) {
+       public void flipimages(int image) {
         ImageView imageView = new ImageView(this);
         imageView.setBackgroundResource(image);
 

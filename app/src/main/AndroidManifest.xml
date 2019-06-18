@@ -11,17 +11,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Fragment"
-            android:label="@string/app_info"></activity>
-        <activity android:name=".Category.muscleActivity"
-            android:label="@string/app_heart"/>
-        <activity android:name=".Category.stomachActivity"
-            android:label="@string/app_stomach"/>
-        <activity android:name=".Category.neckActivity"
-            android:label="@string/app_throat"/>
-        <activity android:name=".Category.headActivity"
-            android:label="@string/app_head"/>
-        <activity android:name=".IntroActivity"
+        <activity android:name=".Main2Activity"
+            android:label=".Main2Activity"/>
+        <activity
+            android:name=".Fragment"
+            android:label="@string/app_info" />
+        <activity
+            android:name=".Category.muscleActivity"
+            android:label="@string/app_heart" />
+        <activity
+            android:name=".Category.stomachActivity"
+            android:label="@string/app_stomach" />
+        <activity
+            android:name=".Category.neckActivity"
+            android:label="@string/app_throat" />
+        <activity
+            android:name=".Category.headActivity"
+            android:label="@string/app_head" />
+        <activity
+            android:name=".IntroActivity"
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,12 +37,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchActivity"
+        <activity
+            android:name=".SearchActivity"
             android:label="@string/app_search"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".InfoActivity" />
-        <activity android:name=".CategoryActivity"
-            android:label="@string/app_category"/>
+        <activity
+            android:name=".CategoryActivity"
+            android:label="@string/app_category" />
         <activity android:name=".MainActivity" />
     </application>
 
