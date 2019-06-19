@@ -24,4 +24,11 @@
 - 아픈 곳이 있을 때 어떤 약을 먹으면 좋을지 쉽게 정보를 파악할 수 있다.
 
 ### 제작 화면 </br></br>
+![메인1](https://user-images.githubusercontent.com/48503082/59731107-e0b57100-927f-11e9-9896-ce7263c28453.PNG)
+
+![검색](https://user-images.githubusercontent.com/48503082/59731110-e57a2500-927f-11e9-8800-4119d3f777a2.PNG)
+
+![검색 리스트 클릭](https://user-images.githubusercontent.com/48503082/59731113-e8751580-927f-11e9-9857-bf9dc065383b.PNG)
+
+![카테고리](https://user-images.githubusercontent.com/48503082/59731115-ea3ed900-927f-11e9-9786-4860c04376d7.PNG)
 
